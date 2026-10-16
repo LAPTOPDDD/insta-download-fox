@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Insta Download Fox",
+  "version": "1.0.0",
+  "description": "Скачивание видео, Reels и каруселей с Instagram одним нажатием",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "storage",
+    "*://*.instagram.com/*"
+  ],
+  "browser_action": {
+    "default_title": "Insta Download Fox",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": ["sniffer.js"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "insta-download-fox@local",
+      "strict_min_version": "91.0"
+    }
+  }
+}

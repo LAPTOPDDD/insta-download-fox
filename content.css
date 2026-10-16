@@ -1,0 +1,56 @@
+.ifx-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7a2f, #ff4d1c);
+  color: #fff;
+  font: 600 12px/1 "Segoe UI", system-ui, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 9999;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.ifx-dl-btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+.ifx-dl-btn:active {
+  transform: translateY(0);
+}
+
+.ifx-float {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.ifx-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  transform: translate(-50%, 24px);
+  background: rgba(20, 20, 24, 0.95);
+  color: #fff;
+  border: 1px solid rgba(255, 122, 47, 0.7);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font: 500 13px/1.3 "Segoe UI", system-ui, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2147483647;
+  pointer-events: none;
+  max-width: 80vw;
+}
+
+.ifx-toast.ifx-show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

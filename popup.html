@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      width: 300px;
+      margin: 0;
+      padding: 14px;
+      background: #17171b;
+      color: #f2f2f4;
+      font: 13px/1.45 "Segoe UI", system-ui, sans-serif;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 15px;
+      color: #ff7a2f;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    h1 span {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      background: linear-gradient(135deg, #ff7a2f, #ff4d1c);
+      text-align: center;
+      font-size: 11px;
+      line-height: 18px;
+      color: #fff;
+    }
+    .sub {
+      color: #9a9aa3;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    button {
+      width: 100%;
+      padding: 9px 10px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ff7a2f, #ff4d1c);
+      color: #fff;
+      font: 600 13px "Segoe UI", system-ui, sans-serif;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    button:hover { filter: brightness(1.1); }
+    ol {
+      margin: 6px 0 0;
+      padding-left: 18px;
+      color: #c9c9d1;
+      font-size: 12px;
+    }
+    li { margin-bottom: 3px; }
+    #status {
+      min-height: 16px;
+      color: #7ee08a;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1><span>F</span> Insta Download Fox</h1>
+  <div class="sub">Видео, Reels и карусели с Instagram</div>
+
+  <button id="dl">Скачать с видимого поста</button>
+  <div id="status"></div>
+
+  <ol>
+    <li>Откройте пост, Reels или карусель.</li>
+    <li>Нажмите <b>⬇ DL</b> на посте или кнопку выше.</li>
+    <li>Файлы сохранятся в папку <b>Изображения/InstaFox/&lt;код поста&gt;</b>.</li>
+  </ol>
+
+  <script src="popup.js"></script>
+</body>
+</html>
